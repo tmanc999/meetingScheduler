@@ -1,0 +1,1820 @@
+submission_page_2 As screen:
+
+    Form2 As form:
+        DataSource: ='Smart Meeting'
+        Height: =453
+        Item: =Defaults('Smart Meeting')
+        Width: =1366
+        Y: =212
+        ZIndex: =1
+
+        "'pre_Tsang, Hon Wai -- P_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Tsang_x002c_HonWai_x002d__x0"
+            Default: =ThisItem.'pre_Tsang, Hon Wai -- P'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Smart Meeting'],DataSourceInfo.DisplayName,"pre_Tsang_x002c_HonWai_x002d__x0")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Tsang_x002c_HonWai_x002d__x0")
+            Required: =false
+            Update: =If(Checkbox2.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Smart, Green and Resilience Team",
+                true,
+                false)
+            Width: =455
+            X: =1
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey159 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Tsang, Hon Wai --P"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage159 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible159 As label:
+                Align: =Align.Center
+                Height: =DataCardKey159.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey159.Y
+                ZIndex: =4
+
+            Checkbox2 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Chan, Chi Wai Stanley -- P/D_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Chan_x002c_ChiWaiStanley_x00"
+            Default: =ThisItem.'pre_Chan, Chi Wai Stanley -- P/D'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="pre_Chan, Chi Wai Stanley -- P/D"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Chan_x002c_ChiWaiStanley_x00")
+            Required: =false
+            Update: = If(Checkbox6.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Water Team",
+                true,
+                false)
+            Width: =455
+            X: =1
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey7 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Chan, Chi Wai Stanley -- P/D"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage7 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible7 As label:
+                Align: =Align.Center
+                Height: =DataCardKey7.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey7.Y
+                ZIndex: =4
+
+            Checkbox6 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Wu, Sai Hang (Henry) -- CP_DataCard3' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Wu_x002c_SaiHang_x0028_Henry"
+            Default: =ThisItem.'pre_Wu, Sai Hang (Henry) -- CP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Wu, Sai Hang (Henry) -- CP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =83
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Wu_x002c_SaiHang_x0028_Henry")
+            Required: =false
+            Update: =If(Checkbox27.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Water Team",
+                true,
+                false)
+            Width: =455
+            X: =2
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey88 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage88 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible88 As label:
+                Align: =Align.Center
+                Height: =DataCardKey88.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey88.Y
+                ZIndex: =4
+
+            Checkbox27 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Chan, Ka Nang (Terry) -- CP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Chan_x002c_KaNang_x0028_Terr"
+            Default: =ThisItem.'pre_Chan, Ka Nang (Terry) -- CP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Chan, Ka Nang (Terry) -- CP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Chan_x002c_KaNang_x0028_Terr")
+            Required: =false
+            Update: =If(Checkbox11.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Traffic and Transport Infrastructure Team",
+                true,
+                false)
+            Width: =455
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey10 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage10 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible10 As label:
+                Align: =Align.Center
+                Height: =DataCardKey10.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey10.Y
+                ZIndex: =4
+
+            Checkbox11 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Chau, King Fung (Cyrus) -- AP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Chau_x002c_KingFung_x0028_Cy"
+            Default: =ThisItem.'pre_Chau, King Fung (Cyrus) -- AP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Chau, King Fung (Cyrus) -- AP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Chau_x002c_KingFung_x0028_Cy")
+            Required: =false
+            Update: =If(Checkbox17.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Town Planning & Urban Design Team",
+                true,
+                false)
+            Width: =455
+            X: =1
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey11 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage11 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible11 As label:
+                Align: =Align.Center
+                Height: =DataCardKey11.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey11.Y
+                ZIndex: =4
+
+            Checkbox17 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Hui, Ka Lam (Carol) -- AP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Hui_x002c_KaLam_x0028_Carol_"
+            Default: =ThisItem.'pre_Hui, Ka Lam (Carol) -- AP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Hui, Ka Lam (Carol) -- AP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Hui_x002c_KaLam_x0028_Carol_")
+            Required: =false
+            Update: =If(Checkbox15.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Town Planning & Urban Design Team",
+                true,
+                false)
+            Width: =455
+            X: =2
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey16 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage16 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible16 As label:
+                Align: =Align.Center
+                Height: =DataCardKey16.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey16.Y
+                ZIndex: =4
+
+            Checkbox15 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Cheung, Chun Ming Freeman -- CP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Cheung_x002c_ChunMingFreeman"
+            Default: =ThisItem.'pre_Cheung, Chun Ming Freeman -- CP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Cheung, Chun Ming Freeman -- CP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Cheung_x002c_ChunMingFreeman")
+            Required: =false
+            Update: =If(Checkbox8.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Environmental Team",
+                true,
+                false)
+            Width: =455
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey12 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage12 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible12 As label:
+                Align: =Align.Center
+                Height: =DataCardKey12.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey12.Y
+                ZIndex: =4
+
+            Checkbox8 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Cheng, Bing Cheung (Kelvin) -- P/D_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Cheng_x002c_BingCheung_x0028"
+            Default: =ThisItem.'pre_Cheng, Bing Cheung (Kelvin) -- P/D'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Cheng, Bing Cheung (Kelvin) -- P/D"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Cheng_x002c_BingCheung_x0028")
+            Required: =false
+            Update: =If(Checkbox18.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Project Management Team",
+                true,
+                false)
+            Width: =455
+            X: =1
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey13 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage13 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible13 As label:
+                Align: =Align.Center
+                Height: =DataCardKey13.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey13.Y
+                ZIndex: =4
+
+            Checkbox18 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Ho, Wai Luek Igor -- P/D_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Ho_x002c_WaiLuekIgor_x002d__"
+            Default: =ThisItem.'pre_Ho, Wai Luek Igor -- P/D'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Ho, Wai Luek Igor -- P/D"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Ho_x002c_WaiLuekIgor_x002d__")
+            Required: =false
+            Update: =If(Checkbox19.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Project Management Team",
+                true,
+                false)
+            Width: =455
+            X: =2
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey15 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage15 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible15 As label:
+                Align: =Align.Center
+                Height: =DataCardKey15.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey15.Y
+                ZIndex: =4
+
+            Checkbox19 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Lai, Yee Yan (Stephen) -- P/D_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Lai_x002c_YeeYan_x0028_Steph"
+            Default: =ThisItem.'pre_Lai, Yee Yan (Stephen) -- P/D'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Lai, Yee Yan (Stephen) -- P/D"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Lai_x002c_YeeYan_x0028_Steph")
+            Required: =false
+            Update: =If(Checkbox21.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Project Management Team",
+                true,
+                false)
+            Width: =455
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey18 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage18 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible18 As label:
+                Align: =Align.Center
+                Height: =DataCardKey18.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey18.Y
+                ZIndex: =4
+
+            Checkbox21 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Chung, Yuen Man (Anna) -- CP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Chung_x002c_YuenMan_x0028_An"
+            Default: =ThisItem.'pre_Chung, Yuen Man (Anna) -- CP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Chung, Yuen Man (Anna) -- CP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Chung_x002c_YuenMan_x0028_An")
+            Required: =false
+            Update: =If(Checkbox9.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Environmental Team",
+                true,
+                false)
+            Width: =455
+            X: =1
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey14 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage14 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible14 As label:
+                Align: =Align.Center
+                Height: =DataCardKey14.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey14.Y
+                ZIndex: =4
+
+            Checkbox9 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Ip, Kin Chor (Marcus) -- CP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Ip_x002c_KinChor_x0028_Marcu"
+            Default: =ThisItem.'pre_Ip, Kin Chor (Marcus) -- CP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Ip, Kin Chor (Marcus) -- CP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Ip_x002c_KinChor_x0028_Marcu")
+            Required: =false
+            Update: =If(Checkbox10.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Environmental Team",
+                true,
+                false)
+            Width: =455
+            X: =2
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey17 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage17 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible17 As label:
+                Align: =Align.Center
+                Height: =DataCardKey17.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey17.Y
+                ZIndex: =4
+
+            Checkbox10 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Law, Man Ting (Martin) -- SP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Law_x002c_ManTing_x0028_Mart"
+            Default: =ThisItem.'pre_Law, Man Ting (Martin) -- SP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Law, Man Ting (Martin) -- SP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Law_x002c_ManTing_x0028_Mart")
+            Required: =false
+            Update: =If(Checkbox12.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Traffic and Transport Infrastructure Team",
+                true,
+                false)
+            Width: =455
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey19 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage19 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible19 As label:
+                Align: =Align.Center
+                Height: =DataCardKey19.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey19.Y
+                ZIndex: =4
+
+            Checkbox12 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Law, Tat Pong (Kelvin) -- P/D_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Law_x002c_TatPong_x0028_Kelv"
+            Default: =ThisItem.'pre_Law, Tat Pong (Kelvin) -- P/D'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Law, Tat Pong (Kelvin) -- P/D"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Law_x002c_TatPong_x0028_Kelv")
+            Required: =false
+            Update: =If(Checkbox16.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Town Planning & Urban Design Team",
+                true,
+                false)
+            Width: =455
+            X: =1
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey20 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage20 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible20 As label:
+                Align: =Align.Center
+                Height: =DataCardKey20.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey20.Y
+                ZIndex: =4
+
+            Checkbox16 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Li, Leon Chun Pong -- AP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Li_x002c_LeonChunPong_x002d_"
+            Default: =ThisItem.'pre_Li, Leon Chun Pong -- AP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Li, Leon Chun Pong -- AP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Li_x002c_LeonChunPong_x002d_")
+            Required: =false
+            Update: =If(Checkbox14.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Town Planning & Urban Design Team",
+                true,
+                false)
+            Width: =455
+            X: =2
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey22 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage22 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible22 As label:
+                Align: =Align.Center
+                Height: =DataCardKey22.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey22.Y
+                ZIndex: =4
+
+            Checkbox14 As checkbox:
+                Text: ="Atted"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Wong, Man Kan (Andy) -- CP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Wong_x002c_ManKan_x0028_Andy"
+            Default: =ThisItem.'pre_Wong, Man Kan (Andy) -- CP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Wong, Man Kan (Andy) -- CP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Wong_x002c_ManKan_x0028_Andy")
+            Required: =false
+            Update: =If(Checkbox13.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Town Planning & Urban Design Team",
+                true,
+                false)
+            Width: =455
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey24 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage24 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible24 As label:
+                Align: =Align.Center
+                Height: =DataCardKey24.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey24.Y
+                ZIndex: =4
+
+            Checkbox13 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Lei, Lok I (Vivian) -- P_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Lei_x002c_LokI_x0028_Vivian_"
+            Default: =ThisItem.'pre_Lei, Lok I (Vivian) -- P'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Lei, Lok I (Vivian) -- P"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Lei_x002c_LokI_x0028_Vivian_")
+            Required: =false
+            Update: =If(Checkbox23.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Project Management Team",
+                true,
+                false)
+            Width: =455
+            X: =1
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey21 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage21 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible21 As label:
+                Align: =Align.Center
+                Height: =DataCardKey21.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey21.Y
+                ZIndex: =4
+
+            Checkbox23 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Yun, Wai Nam (Hazel) -- P_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Yun_x002c_WaiNam_x0028_Hazel"
+            Default: =ThisItem.'pre_Yun, Wai Nam (Hazel) -- P'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Yun, Wai Nam (Hazel) -- P"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =76
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Yun_x002c_WaiNam_x0028_Hazel")
+            Required: =false
+            Update: =If(Checkbox20.Value = true, "Yes", "No") 
+            Visible: |
+                =If(
+                Dropdown1.Selected.Value = "Project Management Team",
+                true,
+                false)
+            Width: =455
+            X: =2
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey27 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage27 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible27 As label:
+                Align: =Align.Center
+                Height: =DataCardKey27.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey27.Y
+                ZIndex: =4
+
+            Checkbox20 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Wong, Kin Man (Simon) -- P/D_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Wong_x002c_KinMan_x0028_Simo"
+            Default: =ThisItem.'pre_Wong, Kin Man (Simon) -- P/D'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Wong, Kin Man (Simon) -- P/D"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Wong_x002c_KinMan_x0028_Simo")
+            Required: =false
+            Update: =If(Checkbox22.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Project Management Team",
+                true,
+                false)
+            Width: =455
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey23 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage23 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible23 As label:
+                Align: =Align.Center
+                Height: =DataCardKey23.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey23.Y
+                ZIndex: =4
+
+            Checkbox22 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Wong, Yin Chiu (Alex) -- P/D_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Wong_x002c_YinChiu_x0028_Ale"
+            Default: =ThisItem.'pre_Wong, Yin Chiu (Alex) -- P/D'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Wong, Yin Chiu (Alex) -- P/D"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Wong_x002c_YinChiu_x0028_Ale")
+            Required: =false
+            Update: =If(Checkbox24.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Project Management Team",
+                true,
+                false)
+            Width: =455
+            X: =1
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey25 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage25 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible25 As label:
+                Align: =Align.Center
+                Height: =DataCardKey25.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey25.Y
+                ZIndex: =4
+
+            Checkbox24 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'Other Attendee_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Attendeesfrom_x003a_AECOM"
+            Default: =ThisItem.'Other Attendee'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Other Attendee"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "Attendeesfrom_x003a_AECOM")
+            Required: =false
+            Update: =DataCardValue2.Text
+            Width: =455
+            X: =2
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey26 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Other Attendee (from O-chart)"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =134
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =70
+                ZIndex: =2
+
+            ErrorMessage26 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+            StarVisible26 As label:
+                Align: =Align.Center
+                Height: =DataCardKey26.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey26.Y
+                ZIndex: =4
+
+            Label1 As label:
+                Color: =RGBA(166, 166, 166, 1)
+                Height: =21
+                Size: =9
+                Text: ="Put the attendee's name in the box below"
+                Width: =265
+                X: =30
+                Y: =40
+                ZIndex: =5
+
+        "'Other Attendee Not in chart_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OtherAttendeeNotinchart"
+            Default: =ThisItem.'Other Attendee Not in chart'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Other Attendee Not in chart"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "OtherAttendeeNotinchart")
+            Required: =false
+            Update: =DataCardValue120.Text
+            Width: =455
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey152 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Other Attendee (Not in O-chart)"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue120 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =131
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =72
+                ZIndex: =2
+
+            ErrorMessage152 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue120.Y + DataCardValue120.Height
+                ZIndex: =3
+
+            StarVisible152 As label:
+                Align: =Align.Center
+                Height: =DataCardKey152.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey152.Y
+                ZIndex: =4
+
+            Label1_3 As label:
+                Color: =RGBA(166, 166, 166, 1)
+                Height: =21
+                Size: =9
+                Text: ="Put the attendee's name in the box below"
+                Width: =265
+                X: =32
+                Y: =40
+                ZIndex: =5
+
+        Remark_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Remark"
+            Default: =ThisItem.Remark
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Remark"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "Remark")
+            Required: =false
+            Update: =DataCardValue121.Text
+            Width: =455
+            X: =1
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey153 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue121 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey153.Y + DataCardKey153.Height + 5
+                ZIndex: =2
+
+            ErrorMessage153 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue121.Y + DataCardValue121.Height
+                ZIndex: =3
+
+            StarVisible153 As label:
+                Align: =Align.Center
+                Height: =DataCardKey153.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey153.Y
+                ZIndex: =4
+
+        Attachments_DataCard1 As typedDataCard.attachmentsEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.Attachments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Signature"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue24.Attachments
+            Width: =455
+            X: =2
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey28 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue24 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisplayMode: =Parent.DisplayMode
+                Height: =150
+                IsInDataCard: =true
+                Items: =Parent.Default
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey28.Y + DataCardKey28.Height + 5
+                ZIndex: =2
+
+            ErrorMessage28 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue24.Y + DataCardValue24.Height
+                ZIndex: =3
+
+            StarVisible28 As label:
+                Align: =Align.Center
+                Height: =DataCardKey28.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey28.Y
+                ZIndex: =4
+
+        "'pre_Dr. Tang, Thomas Sek Khuen -- CP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Dr_x002e_Tang_x002c_ThomasSe"
+            Default: =ThisItem.'pre_Dr. Tang, Thomas Sek Khuen -- CP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="pre_Dr. Tang, Thomas Sek Khuen -- CP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Dr_x002e_Tang_x002c_ThomasSe")
+            Required: =false
+            Update: =If(Checkbox5.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "Smart, Green and Resilience Team",
+                true,
+                false)
+            Width: =455
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey33 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Dr. Tang, Thomas Sek Khuen - CP"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage33 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible33 As label:
+                Align: =Align.Center
+                Height: =DataCardKey33.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey33.Y
+                ZIndex: =4
+
+            Checkbox5 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Cheung, Kwok Wai (Stephen) -- AP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Cheung_x002c_KwokWai_x0028_S"
+            Default: =ThisItem.'pre_Cheung, Kwok Wai (Stephen) -- AP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="pre_Cheung, Kwok Wai (Stephen) -- AP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Cheung_x002c_KwokWai_x0028_S")
+            Required: =false
+            Update: =If(Checkbox4.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "BIM & Innovation Technology Team",
+                true,
+                false)
+            Width: =455
+            X: =2
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey35 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Cheung, Kwok Wai (Stephen) - AP"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage35 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible35 As label:
+                Align: =Align.Center
+                Height: =DataCardKey35.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey35.Y
+                ZIndex: =4
+
+            Checkbox4 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+        "'pre_Lai, Man Kit (Thomson) -- SP_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="pre_Lai_x002c_ManKit_x0028_Thoms"
+            Default: =ThisItem.'pre_Lai, Man Kit (Thomson) -- SP'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="pre_Lai, Man Kit (Thomson) -- SP"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Smart Meeting'], DataSourceInfo.MaxLength, "pre_Lai_x002c_ManKit_x0028_Thoms")
+            Required: =false
+            Update: =If(Checkbox3.Value = true, "Yes", "No") 
+            Visible: |-
+                =If(
+                Dropdown1.Selected.Value = "BIM & Innovation Technology Team",
+                true,
+                false)
+            Width: =455
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey34 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Lai, Man Kit (Thomson) - SP"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage34 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =3
+
+            StarVisible34 As label:
+                Align: =Align.Center
+                Height: =DataCardKey34.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey34.Y
+                ZIndex: =4
+
+            Checkbox3 As checkbox:
+                Text: ="Attend"
+                X: =40
+                Y: =40
+                ZIndex: =5
+
+    Button1_1 As button:
+        OnSelect: |-
+            =Set(
+                uniqueid,
+                GUID()
+            );
+            Patch(
+                'Smart Meeting',
+                Defaults('Smart Meeting'),
+                Form1.Updates,
+                Form2.Updates
+            );
+            Notify(
+                "Application Submitted",
+                NotificationType.Success,
+                500
+            );
+            meetingappsendemailnoti.Run(
+                Text(User().Email & "/" & Text('recipient email_DataCard1'.Update)),
+                Text('Meeting with_DataCard1'.Update),
+                Text(DataCardValue4.Selected.Value),
+                Text('Meeting Subject_DataCard1'.Update),
+                Text(
+                    DateTimeValue(DateValue1.SelectedDate),
+                    "[$-en-GB]dd-mmm-yy"
+                ),
+                Text(HourValue1.Selected.Value) & Text(MinuteValue1.Selected.Value) & "-" & Text(HourValue2.Selected.Value) & Text(MinuteValue2.Selected.Value),
+                Text(Venue_DataCard1.Update),
+                Text(Project_DataCard1.Update)
+            );
+            ResetForm(Form2);
+            ResetForm(Form1);
+            Navigate('Home page')
+        Text: ="Submit"
+        X: =616
+        Y: =700
+        ZIndex: =2
+
+    Button2_1 As button:
+        OnSelect: =ResetForm(Form2);
+        Text: ="Clear"
+        X: =1011
+        Y: =700
+        ZIndex: =3
+
+    Button4 As button:
+        OnSelect: =Navigate(submission_page_1)
+        Text: ="Back "
+        X: =220
+        Y: =700
+        ZIndex: =4
+
+    Label1_1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(153, 207, 236, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Text: ="Submission Detail"
+        Width: =1366
+        ZIndex: =5
+
+    Dropdown1 As dropdown:
+        Height: =38
+        Items: =["Project Management Team","Town Planning & Urban Design Team","Traffic and Transport Infrastructure Team","Environmental Team","Water Team","Smart, Green and Resilience Team","BIM & Innovation Technology Team"]
+        Width: =465
+        X: =37
+        Y: =126
+        ZIndex: =6
+
+    DataCardKey13_1 As label:
+        Height: =43
+        Size: =19
+        Text: ="Select Teams from dropbox below"
+        Width: =465
+        Wrap: =false
+        X: =37
+        Y: =83
+        ZIndex: =7
+
+    hint_lable As label:
+        Color: =RGBA(128, 128, 128, 1)
+        Height: =33
+        Size: =11
+        Text: ="**Leave the box blanked if the member will not attend the meeting"
+        Width: =635
+        Wrap: =false
+        X: =15
+        Y: =179
+        ZIndex: =8
+

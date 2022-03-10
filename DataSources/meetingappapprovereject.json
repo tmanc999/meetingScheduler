@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "4c4ad7f4-ab1c-4e87-8af9-cec5b37d4fb7",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "meetingappapprovereject",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

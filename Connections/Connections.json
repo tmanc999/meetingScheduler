@@ -1,0 +1,157 @@
+{
+  "06ef9bce-6288-49d8-abe5-1a0d2bdc5127": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sendmail/connections/shared-sendmail-923de61a-7086-4604-b2d6-8a288a915325",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Mail",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1528/1.0.1528.2589/sendmail/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sendmail",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "d590fb98-30fd-4fe6-8010-7c87dc52677b"
+    ],
+    "id": "06ef9bce-6288-49d8-abe5-1a0d2bdc5127"
+  },
+  "27e0a904-9e14-40d2-b4af-3c1f37fc5776": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sendmail/connections/shared-sendmail-52e545b0-4902-4b05-8c80-b4d3-ab9d4603",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Mail",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1528/1.0.1528.2589/sendmail/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sendmail",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "e5139097-8998-4b18-94f1-967d6ff449a2"
+    ],
+    "id": "27e0a904-9e14-40d2-b4af-3c1f37fc5776"
+  },
+  "d590fb98-30fd-4fe6-8010-7c87dc52677b": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/4c4ad7f4-ab1c-4e87-8af9-cec5b37d4fb7",
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-04.westus.logic.azure.com:443/workflows/20d81676009d4e4d9b6c672c7413c339/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Y0tnxmWfk_M-mZwd5uPn5oAvWzkb7U-yz1nSXc4kdxM",
+      "workflowEndpoint": "/subscriptions/b6e9a6a8-5af4-4782-980a-3b0778082707/resourceGroups/16ed5ab42b594e40806d8a30bdc9cf26-edd42b37ba494c41b4e39506e2d52818/providers/Microsoft.Logic/workflows/4c4ad7f4-ab1c-4e87-8af9-cec5b37d4fb7",
+      "workflowName": "4c4ad7f4-ab1c-4e87-8af9-cec5b37d4fb7",
+      "workflowPath": "/subscriptions/b6e9a6a8-5af4-4782-980a-3b0778082707/resourceGroups/16ed5ab42b594e40806d8a30bdc9cf26-edd42b37ba494c41b4e39506e2d52818/providers/Microsoft.Logic/workflows/4c4ad7f4-ab1c-4e87-8af9-cec5b37d4fb7"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "06ef9bce-6288-49d8-abe5-1a0d2bdc5127": {
+          "value": "shared_sendmail_1"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "4c4ad7f4-ab1c-4e87-8af9-cec5b37d4fb7"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sendmail_1": {
+          "value": "06ef9bce-6288-49d8-abe5-1a0d2bdc5127"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "4c4ad7f4-ab1c-4e87-8af9-cec5b37d4fb7"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "meetingappapprovereject"
+    ],
+    "dependencies": {
+      "shared_sendmail_1": "06ef9bce-6288-49d8-abe5-1a0d2bdc5127"
+    },
+    "dependents": [],
+    "id": "d590fb98-30fd-4fe6-8010-7c87dc52677b"
+  },
+  "e5139097-8998-4b18-94f1-967d6ff449a2": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/0f14fe53-f4f1-4f82-aac3-70fde7ddd2c2",
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-04.westus.logic.azure.com:443/workflows/8a2c1ac37de541db96427d333acfb124/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=HHL2xlMGoAgAQQAd6mRd5Zh7Xiq408Kf5fVjsMR8B9E",
+      "workflowEndpoint": "/subscriptions/b6e9a6a8-5af4-4782-980a-3b0778082707/resourceGroups/16ed5ab42b594e40806d8a30bdc9cf26-edd42b37ba494c41b4e39506e2d52818/providers/Microsoft.Logic/workflows/0f14fe53-f4f1-4f82-aac3-70fde7ddd2c2",
+      "workflowName": "0f14fe53-f4f1-4f82-aac3-70fde7ddd2c2",
+      "workflowPath": "/subscriptions/b6e9a6a8-5af4-4782-980a-3b0778082707/resourceGroups/16ed5ab42b594e40806d8a30bdc9cf26-edd42b37ba494c41b4e39506e2d52818/providers/Microsoft.Logic/workflows/0f14fe53-f4f1-4f82-aac3-70fde7ddd2c2"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "27e0a904-9e14-40d2-b4af-3c1f37fc5776": {
+          "value": "shared_sendmail_1"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "0f14fe53-f4f1-4f82-aac3-70fde7ddd2c2"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sendmail_1": {
+          "value": "27e0a904-9e14-40d2-b4af-3c1f37fc5776"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "0f14fe53-f4f1-4f82-aac3-70fde7ddd2c2"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "meetingappsendemailnoti"
+    ],
+    "dependencies": {
+      "shared_sendmail_1": "27e0a904-9e14-40d2-b4af-3c1f37fc5776"
+    },
+    "dependents": [],
+    "id": "e5139097-8998-4b18-94f1-967d6ff449a2"
+  },
+  "ec36b426-328e-48e8-af8f-2c971cd0d64f": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/5c5ae4d246924b8cb3b06a2ef844d79c",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1554/1.0.1554.2707/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://aecom.sharepoint.com/sites/extranet-CE20SmartMeeting": {
+        "dataSources": {
+          "Smart Meeting": {
+            "tableName": "4745b5d9-3c15-48f7-90d2-9169acca0694"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Smart Meeting"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ec36b426-328e-48e8-af8f-2c971cd0d64f"
+  }
+}

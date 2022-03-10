@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "0f14fe53-f4f1-4f82-aac3-70fde7ddd2c2",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "meetingappsendemailnoti",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

@@ -1,0 +1,306 @@
+"'Home page' As screen.'tabletLayout_HeaderAndGallery_ver3.0'":
+    OnVisible: =
+
+    RectQuickActionBar1 As rectangle:
+        Height: =64
+        Width: =Parent.Width
+        ZIndex: =1
+
+    "TemplateGalleryList1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =628
+        Items: =gallary_filter_commnad
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(168, Self.Height - 60)
+        Width: =Parent.Width
+        Y: =137
+        ZIndex: =1
+
+        Title3 As label:
+            Height: =68
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =19
+            Text: ="["&ThisItem.Status&"]    "&ThisItem.'Meeting Subject'&"  -  "&ThisItem.Project
+            VerticalAlign: =VerticalAlign.Top
+            Width: =1269
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle2 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: ="("& Text(ThisItem.Created,"dd-mmm-yyyy") & ") "&ThisItem.'Meeting Type'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title3.Y + Title3.Height + 2
+            ZIndex: =2
+
+        Body1 As label:
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: =ThisItem.'Meeting Start Time'&" - "&ThisItem.'Meeting End Time'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Subtitle2.Y + Subtitle2.Height + 4
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent);If(approver,Navigate(meeting_details_client_view), Navigate(meeting_details_aecom_view))
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator4 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Title1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(153, 207, 236, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =64
+        PaddingRight: =10
+        Size: =22
+        Text: ="Online Meeting App (CE20/CE21)"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Icon1 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =41
+        Icon: =Icon.Add
+        OnSelect: =Navigate(submission_page_1)
+        Visible: =If(approver, false, true)
+        Width: =49
+        X: =1287
+        Y: =11
+        ZIndex: =3
+
+    Dropdown2 As dropdown:
+        Items: =Distinct('Smart Meeting',Text(DateValue(First(Split('Meeting Start Time', " " )).Result) ,"[$-en-US]yyyy/mm"))
+        OnChange: |-
+            =If(Toggle2.Value=false And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=false And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result),'Meeting Start Time',Descending)));
+        Width: =389
+        Y: =64
+        ZIndex: =4
+
+    Icon2 As icon.Reload:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =34
+        Icon: =Icon.Reload
+        OnSelect: =Refresh('Smart Meeting')
+        Width: =34
+        X: =1212
+        Y: =15
+        ZIndex: =5
+
+    Label2 As label:
+        Text: =User().Email
+        Visible: =false
+        Width: =300
+        Y: =728
+        ZIndex: =6
+
+    Dropdown2_1 As dropdown:
+        DisplayMode: |
+            =If(Toggle2.Value = true, DisplayMode.Disabled, DisplayMode.Edit)
+        Items: =Distinct('Smart Meeting',Project)
+        OnChange: |-
+            =If(Toggle2.Value=false And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=false And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result),'Meeting Start Time',Descending)));
+        OnSelect: =
+        Width: =405
+        X: =468
+        Y: =64
+        ZIndex: =7
+
+    Dropdown2_2 As dropdown:
+        Default: ="Submitted"
+        DisplayMode: |
+            =If(Toggle2_1.Value = true, DisplayMode.Disabled, DisplayMode.Edit)
+        Items: =Distinct('Smart Meeting',Status)
+        OnChange: |-
+            =If(Toggle2.Value=false And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=false And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result),'Meeting Start Time',Descending)));
+        OnSelect: =
+        Width: =411
+        X: =955
+        Y: =64
+        ZIndex: =8
+
+    Label4 As label:
+        Text: =
+        X: =568
+        Y: =588
+        ZIndex: =9
+
+    Icon3 As icon.Alarm:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =40
+        Icon: =Icon.Alarm
+        OnSelect: =Set(_Popup,true)
+        Width: =40
+        X: =1113
+        Y: =12
+        ZIndex: =14
+
+    "'Alert(_Popup)' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =14
+
+        Rectangle1 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.55)
+            Height: =767
+            Visible: =_Popup
+            Width: =1366
+            ZIndex: =10
+
+        TextInput2_1 As text:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Default: |-
+                ="
+                
+                "&CountRows(Filter('Smart Meeting',Status = "(Post meeting) Submitted"))&" (Post meeting) Submitted requests in "&Concat(Distinct(Filter('Smart Meeting',Status = "(Post meeting) Submitted"),Text(DateValue(First(Split('Meeting Start Time', " " )).Result) ,"[$-en-US]yyyy/mm")), Result,", ")&
+                " are waiting for your action."&"
+                
+                "&CountRows(Filter('Smart Meeting',Status = "Submitted"))&" Submitted requests in "&Concat(Distinct(Filter('Smart Meeting',Status = "Submitted"),Text(DateValue(First(Split('Meeting Start Time', " " )).Result) ,"[$-en-US]yyyy/mm")), Result,", ")&
+                " are waiting for your action."
+            DisplayMode: =DisplayMode.View
+            Height: =354
+            Mode: =TextMode.MultiLine
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Size: =18
+            Visible: =_Popup
+            Width: =613
+            X: =389
+            Y: =180
+            ZIndex: =11
+
+        Label3_22 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 0, 0, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            Size: =25
+            Text: ="Alert"
+            Visible: =_Popup
+            Width: =560
+            X: =415
+            Y: =180
+            ZIndex: =12
+
+        Button3_2 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(136, 160, 209, 1)
+            Height: =54
+            OnSelect: =Set(_Popup,false)
+            Text: ="Close the window"
+            Visible: =_Popup
+            Width: =219
+            X: =586
+            Y: =444
+            ZIndex: =13
+
+    Circle1 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =10
+        Visible: =If(CountRows(Filter('Smart Meeting',Status = "(Post meeting) Submitted"))>0 || CountRows(Filter('Smart Meeting',Status = "Submitted"))>0, true, false) 
+        Width: =10
+        X: =1153
+        Y: =11
+        ZIndex: =15
+
+    Toggle2 As toggleSwitch:
+        FontWeight: =FontWeight.Lighter
+        Height: =29
+        OnCheck: |-
+            =If(Toggle2.Value=false And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=false And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result),'Meeting Start Time',Descending)));
+        OnUncheck: |-
+            =If(Toggle2.Value=false And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=false And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result),'Meeting Start Time',Descending)));
+        ShowLabel: =false
+        Width: =57
+        X: =400
+        Y: =75
+        ZIndex: =16
+
+    Toggle2_1 As toggleSwitch:
+        Height: =29
+        OnCheck: |-
+            =If(Toggle2.Value=false And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=false And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result),'Meeting Start Time',Descending)));
+        OnUncheck: |-
+            =If(Toggle2.Value=false And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=false, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Status = Dropdown2_2.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=false And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result And Project = Dropdown2_1.Selected.Result),'Meeting Start Time',Descending)));
+            If(Toggle2.Value=true And Toggle2_1.Value=true, Set(gallary_filter_commnad, Sort(Filter('Smart Meeting', Text(DateValue(First(Split('Meeting Start Time', " " )).Result),"[$-en-US]yyyy/mm")= Dropdown2.Selected.Result),'Meeting Start Time',Descending)));
+        ShowLabel: =false
+        Width: =61
+        X: =888
+        Y: =75
+        ZIndex: =17
+
+    Label5 As label:
+        Align: =Align.Right
+        Font: =Font.'Segoe UI'
+        Height: =33
+        Text: =CountRows(TemplateGalleryList1.AllItems)&" records in total."
+        Width: =389
+        X: =955
+        Y: =105
+        ZIndex: =18
+

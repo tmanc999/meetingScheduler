@@ -1,0 +1,7 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(approver, If(User().Email = "mayymlau@CE202021.onmicrosoft.com" Or User().Email = "teresaosma@CE202021.onmicrosoft.com" Or User().Email = "kaberlinaho@CE202021.onmicrosoft.com" Or User().Email = "raymondcheung@CE202021.onmicrosoft.com" Or User().Email = "winghongchung@CE202021.onmicrosoft.com" Or User().Email = "cktsang@CE202021.onmicrosoft.com" Or User().Email = "mcyyue@CE202021.onmicrosoft.com" Or User().Email = "hwtsui@CE202021.onmicrosoft.com" Or User().Email = "victorngan@CE202021.onmicrosoft.com" Or User().Email = "iwslai@CE202021.onmicrosoft.com" Or User().Email = "amywong@CE202021.onmicrosoft.com" Or User().Email = "vscliu@CE202021.onmicrosoft.com"  Or User().Email = "aygto@CE202021.onmicrosoft.com"  Or User().Email = "shlau@CE202021.onmicrosoft.com", true, false));
+        If(CountRows(Filter('Smart Meeting',Status = "(Post meeting) Submitted"))>0 || CountRows(Filter('Smart Meeting',Status = "Submitted"))>0, Set(_Popup,true), Set(_Popup, false)); Set(approval_Popup, false)
+    StartScreen: ='Home page'
+
